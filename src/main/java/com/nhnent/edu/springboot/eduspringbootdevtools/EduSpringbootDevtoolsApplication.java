@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import java.util.Map;
 
-@RestController
+@Controller
 @SpringBootApplication
 public class EduSpringbootDevtoolsApplication {
 
@@ -15,8 +15,9 @@ public class EduSpringbootDevtoolsApplication {
     }
 
     @GetMapping("/")
-    public String hello() {
-        return "HELLO";
+    public String hello(Map<String, Object> model) {
+    	model.put("message", "Hi, Japan!!");
+        return "hello";
     }
 
 

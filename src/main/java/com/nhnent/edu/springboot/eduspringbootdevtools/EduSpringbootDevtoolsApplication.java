@@ -16,8 +16,8 @@ public class EduSpringbootDevtoolsApplication {
 
     @GetMapping("/")
     public String hello(Map<String, Object> model) {
-    	model.put("message", "Hi, Japan!!");
-        return "hello";
+    	model.put("message", "Hi, Korea!!");
+        return "index";
     }
 
 
